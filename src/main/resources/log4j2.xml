@@ -26,6 +26,8 @@
         </RollingFile>
     </Appenders>
 
+
+    <!-- logging levels -->
     <Loggers>
         <Root level="ALL">
             <AppenderRef ref="File"/>
