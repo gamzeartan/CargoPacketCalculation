@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 public class CalculationApplication {
 
 
-    static Scanner scanner = new Scanner(System.in);
+    static Scanner scn = new Scanner(System.in);
     static boolean var = true;
 
 
@@ -33,17 +33,21 @@ public class CalculationApplication {
                     "\n1.Kargo Paketi Hesapla" +
                     "\n2.Çıkış.");
 
-            int answer = scanner.nextInt();
+            int answer = scn.nextInt();
 
             switch(answer){
 
                 case 1:
-                    System.out.println("7 kilogramlık sabunların adedi:");
-                    int sevenKgSoapAmount = scanner.nextInt();
-                    System.out.println("2 kilogramlık sabunların adedi:");
-                    int twoKgSoapAmount = scanner.nextInt();
-                    System.out.println("İstenilen paket ağırlığı");
-                    int weightOfPacket = scanner.nextInt();
+                    System.out.println("7 kg'lık sabunların adedi: ");
+                    int sevenKgSoap = scn.nextInt();
+                    System.out.println("2 kg'lık sabunların adedi: ");
+                    int twoKgSoap = scn.nextInt();
+                    System.out.println("İstenilen paket ağırlığı: ");
+                    int weight = scn.nextInt();
+
+                    CargoPacket cp = new CargoPacket();
+                    cp.prepareCargoPacket(sevenKgSoap,twoKgSoap,weight);
+
                     break;
 
                 case 2:
